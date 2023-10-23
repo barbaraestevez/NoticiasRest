@@ -2,4 +2,19 @@
     <h2 class="heading">
         Filtrar noticias por País y Categoría
     </h2>
+    <div class="row">
+        <form (ngSubmit)="buscarNoticia()">
+            <div class="form-group">
+                <label for="exampleSelect2" class="form-label mt-4">Categoría</label>
+                <select class="form-select form-select-lg" name="Categoria" [(ngModel)]="categoriaSeleccionada">
+                  <option *ngFor="let cat of categorias" [value]="cat.value">{{cat.nombre}}</option>
+                </select>
+                <label for="exampleSelect2" class="form-label mt-4">País</label>
+                <select class="form-select form-select-lg" name="Pais" [(ngModel)]="paisSeleccionado">
+                  <option *ngFor="let pais of paises" [value]="pais.value">{{pais.nombre}}</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-info btn-block btn-lg mt4">Buscar</button>
+        </form>
+    </div>
 </div>

@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
-import { ListaNoticiasComponent } from './components/lista-noticias/lista-noticias.component';
+import { ListaNoticiasComponent } from './components/listado-noticias/listado-noticias.component';
 import { FormularioComponent } from './components/formulario/formulario.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { FormularioComponent } from './components/formulario/formulario.componen
     FormularioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
