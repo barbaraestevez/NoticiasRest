@@ -1,5 +1,12 @@
 <app-nav-bar [title]="'App Noticias'"></app-nav-bar>
-<div class="container">
+<div class="container-fluid">
   <app-formulario (parametrosSeleccionados)="buscarNoticias($event)"></app-formulario>
+  <app-spinner *ngIf="loading"></app-spinner>
+  <app-listado-noticias [listaNoticias]="listaNoticias"></app-listado-noticias>
 </div>
-<app-listado-noticias>[listadoNoticias]="listaNoticias"</app-listado-noticias>
+
+
+<!--Ejercicio 1: Editar "ListaNoticias" para asignar una imagen por defecto a las noticias que no tienen nada en la propiedad "urlToImage". 
+  Opcionalmente, quitar las noticias sin "content".
+    Ejercicio 2: Implementar un buscador en el nav-bar que busque noticias en todos los paises y todas las categorías en los que se encuentre
+  la palabra o frase introducida en el buscador.-->

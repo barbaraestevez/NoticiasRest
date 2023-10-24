@@ -5,6 +5,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './listado-noticias.component.html',
   styleUrls: ['./listado-noticias.component.css']
 })
-export class ListaNoticiasComponent {
+export class ListadoNoticiasComponent {
   @Input() listaNoticias:any;
+  noImageContent:string = "";
 }

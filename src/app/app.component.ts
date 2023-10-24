@@ -9,16 +9,21 @@ import { NoticiasService } from './services/noticias.service';
 export class AppComponent {
   // title = 'NoticiasRest';
   listaNoticias:any[]=[];
+  loading:boolean = false;
 
   constructor(private _api:NoticiasService){}
 
   buscarNoticias(param:any){
-    this._api.getNoticias(param).subscribe(result=> // siempre todos los Observable tienen un método subscribe
-      {
-        console.log(result);
-      }
-      )
-    console.log('Yo soy tu padre');
-    console.log(param);
+    this.loading = true;
+
+    setTimeout(()=>{
+      this._api.getNoticias(param).subscribe(result=> // siempre todos los Observable tienen un método subscribe
+        {
+          this.loading = false;
+          this.listaNoticias = result.articles;
+        }
+        )
+        console.log('hola');
+    },2000);
   }
 }

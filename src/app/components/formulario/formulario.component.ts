@@ -8,6 +8,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class FormularioComponent {
   categoriaSeleccionada:string = 'general';
   paisSeleccionado:string = 'us';
+  busqueda:string = '';
 
   categorias:any[] = [
     {value:'general', nombre:'General'},
@@ -27,7 +28,10 @@ export class FormularioComponent {
     {value:'ar', nombre:'Argentina'},
     {value:'co', nombre:'Colombia'},
     {value:'br', nombre:'Brasil'},
-    {value:'fr', nombre:'Francia'}
+    {value:'fr', nombre:'Francia'},
+    {value:'de', nombre:'Alemania'},
+    {value:'ch', nombre:'Suiza'},
+    {value:'cn', nombre:'China'}
   ]
 
   @Output() parametrosSeleccionados = new  EventEmitter<any>(); //con esta línea vamos a sacar los datos seleccionados. @Input de padres a hijos @Output de hijos a padres. Por defecto va a ser any, con lo que no hace falta poner <any> detrás de EventEmitter.
