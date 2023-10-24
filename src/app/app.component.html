@@ -1,4 +1,8 @@
-<app-nav-bar [title]="'App Noticias'"></app-nav-bar>
+<app-nav-bar [title]="'App Noticias'">
+  <!--<app-search-nav-bar (parametrosBusqueda)="searchNav">-->
+    
+  <!-- </app-search-nav-bar> -->
+</app-nav-bar>
 <div class="container-fluid">
   <app-formulario (parametrosSeleccionados)="buscarNoticias($event)"></app-formulario>
   <app-spinner *ngIf="loading"></app-spinner>

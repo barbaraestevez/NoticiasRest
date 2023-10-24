@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-nav-bar.component.css']
 })
 export class SearchNavBarComponent {
+  searchNavBar:string = '';
 
+  // @Output() parametrosBusqueda = new EventEmitter<any>();
 }

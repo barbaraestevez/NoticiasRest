@@ -8,7 +8,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class FormularioComponent {
   categoriaSeleccionada:string = 'general';
   paisSeleccionado:string = 'us';
-  busqueda:string = '';
 
   categorias:any[] = [
     {value:'general', nombre:'General'},
